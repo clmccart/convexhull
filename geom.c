@@ -15,7 +15,6 @@ int signed_area2D(point2D a, point2D b, point2D c) {
 
   return ((b.x - a.x)*(c.y - a.y) - (b.y - a.y)*(c.x - a.x));
 }
-//CLAIRE 2/6 4pm
 
 
 /* **************************************** */
@@ -24,7 +23,6 @@ int collinear(point2D p, point2D q, point2D r) {
 
   return (signed_area2D(p, q, r) == 0);
 }
-//CLAIRE 2/6 4pm
 
 
 /* **************************************** */
@@ -33,7 +31,7 @@ int left (point2D a, point2D b, point2D c) {
 
   return (signed_area2D(a, b, c) > 0);
 }
-//CLAIRE 2/6 4pm
+
 
 /* swaps 2 points a and b */
 void swap (point2D *a, point2D *b) {
@@ -132,7 +130,7 @@ pointNode* graham_scan(point2D *p, int n) {
   head = push(head, p[2]);
   int count = 3;
 
-  // trverse all points and maintain the convex hull of all traversed points
+  // traverse all points and maintain the convex hull of all traversed points
   for (int i = 3; i < n; i++) {
 
     // if the point is to the left of the previous 2 points, add to the CH
@@ -159,4 +157,4 @@ pointNode* graham_scan(point2D *p, int n) {
 
   return head;
 }
-//CLAIRE 2/6 4pm
+
